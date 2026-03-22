@@ -1,0 +1,343 @@
+#Python : 
+
+Operatio on variables : 
+
+1.Arithmetice : 
++ - * / % **
+
+2.Relational/Comparison Operator : 
+> , >= , < , <= , == ,!=
+
+Note : Result always True/False
+
+>>> a=10
+>>> b=20
+>>>
+>>> a>b
+False
+>>> b>a
+True
+>>> a<b
+True
+>>> a<=b
+True
+>>> a>=b
+False
+>>> a==b
+False
+>>> a!=b
+True
+
+#3. Logical Operator
+and , or , not 
+
+10 > 20 and 5>10
+
+F  and F => F
+F  and T => F 
+T  and F => F 
+T  and T => T
+
+F  or F => F
+F  or T => T 
+T  or F => T 
+T  or T => T
+
+not F => T 
+not T => F 
+
+
+#Identity Operator : (is,is not)
+
+>>> c1='PUNE'
+>>>
+>>> c2='PUNE'
+>>> c1 is c2
+True
+>>> c1 is not c2
+False
+>>>
+>>> c1='Pune'
+>>> c2='pune'
+>>> c1 is c2
+False
+>>> c1 is not c2
+True
+>>>
+
+#membership Operator : (in,not in )
+
+>>> msg="I Love India"
+>>> "India" in msg
+True
+>>> "India" not in msg
+False
+>>> "USA" in msg
+False
+>>> "USA" not in msg
+True
+>>>
+
+#assignment Operator : (+=,-=,*=,/=)
+
+num=10
+num=num+5
+print(num)
+
+
+num=10
+num+=1
+print(num)    #11
+num-=2
+print(num)    #9
+num*=2
+print(num)    #18
+num/=3
+print(num)    #6
+
+#convert one datatype to other 
+int(),float(),str(),bool()
+
+
+a="10"
+b="20"
+
+a=int(a)
+b=int(b)
+
+print(a+b)
+
+
+print(a+b)
+
+========================
+print()
+type()
+int()
+float()
+str()
+bool()
+=============================
+Arithmetice : + - * / % **
+relational : > >= < <= == !=
+logical : and , or , not 
+membership : in , not in 
+identity is,is not 
+assignment : +=,-=,*=,/=
+
+
+num1=45
+num2=67
+res=num1+num2
+print(res)
+
+#define redius and calculate area of circle 
+r=10
+area=3.14*r*r 
+print(area)
+
+
+#input method  to accept input from user : 
+variable_name=input("Enter  a value:")
+
+#accept input from user
+r=input("Enter redius of circle:")
+
+#convert str value into int
+r=int(r)
+
+#calculate area
+area=3.14*r*r 
+
+#print Result
+print(area)
+
+exm2-
+#define price,qty,discount and calculate final price 
+
+#input
+pname=input("Enter product name:")
+price=input("Enter price of each product:")
+qty=input("Enter how many product you bought :")
+dis=input("Enter Discount in number(ex.10):")
+
+#print(pname)
+#print(price)
+#print(qty)
+#print(dis)
+
+price=int(price)
+qty=int(qty)
+dis=float(dis)
+
+#total price 
+total_price=price*qty
+total_dis=(total_price)*(dis/100)
+final_price=total_price-total_dis
+
+prit(final_price)
+
+
+#string format()
+
+2.x | 3.x
+>>> name="karan"
+>>> age=25
+>>> "Hey {0}{0},Good Morning, You are {1} years Old".format(name,age)
+
+3.x
+f"Hey {name},Good Morning, You are {age} years Old"
+
+exp -
+open notedpad www.notedp.link/SST 
+copy code 
+create a pricecal.py  paste code 
+run code python pricecal.py 
+input : 
+"Pen"
+10
+20
+10
+
+============================================
+#write Program to accept name and sal from user and print in hand sal after 12%PF , 200 PT , 3%Mediclaim 
+
+#accept input 
+
+name=input("Enter your good name:")
+sal=input("Enter your Monthly Sal:")
+
+sal=float(sal)
+
+total_ded=(sal*12/100)+200+(sal*3/100)
+
+inhand_sal=sal-total_ded
+
+print("Hey {2},your inhand salary after deduction of {0} is {1} Rs.".format(total_ded,inhand_sal,name))
+
+========================
+exm- 
+#write program to accept two values from an user and print its addtion
+
+num1=input("Enter first number:")
+num2=input("Enter Second number:")
+
+num1=int(num1)
+num2=int(num2)
+
+res=num1+num2
+
+print(res)
+
+
+#accept parameter from user while running script 
+
+python D:/add.py 56 69
+
+exp1:
+
+from sys import argv
+
+num1=argv[1]
+num2=argv[2]
+
+num1=int(num1)
+num2=int(num2)
+
+res=num1+num2
+
+print(res)
+
+
+================
+exm-2:
+
+#define price,qty,discount and calculate final price 
+#owner : sayusofttech
+#perpose : to calculate final of product
+#create_date:01-01-2026
+#modify date:11-01-2026
+#version : 2.0.1
+#run cmd : python D:/pricecal.py "Mob" 100000 5 10
+
+
+from sys import argv
+
+#accept input
+pname=argv[1]
+price=argv[2]
+qty=argv[3]
+dis=argv[4]
+
+#print(pname)
+#print(price)
+#print(qty)
+#print(dis)
+
+#convert into int 
+price=int(price)
+qty=int(qty)
+dis=float(dis)
+
+#calculate final price 
+total_price=price*qty
+total_dis=(total_price)*(dis/100)
+final_price=total_price-total_dis
+
+#print msg
+print("For {0} {1} of each {5} Rs. you have total amount {2} , You have saved {3} Rs. Now , you need to pay just {4} Rs.".format(qty,pname,total_price,total_dis,final_price,price))
+
+=====================================================
+#int , float , str , bool , complex 
+#list , tuple , set , dict 
+
+
+#String : 
+seq of char 
+
+sayusofttech
+abc123
+aman123@gmail.com 
+
+#define 
+''
+""
+'''
+"""
+name='karan'
+name="karan"
+name='''karan'''
+name="""karan"""
+
+city='Pune'
+msg="Good Morning"
+
+greet="Hey Aman, good Morning, Hope you are doing well"
+
+notice='''All Students ,
+Are learning Python now
+python is easy and imp'''
+
+notice="""All Students ,
+Are learning Python now
+python is easy and imp"""
+
+type(city)
+type(greet)
+type(notice)
+
+
+msg="Hi All,'Python' is important"
+
+>>> msg='Hi All,"Python" is important'
+>>> print(msg)
+Hi All,"Python" is important
+>>> msg="Hi All,'Python' is important"
+>>> print(msg)
+Hi All,'Python' is important
+
+
+===============================
+#define string
+#access string 
+#operations perform on string.
